@@ -19,7 +19,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
-from posts.views import PostViewSet, CommentViewSet
+from posts.views import PostViewSet, CommentViewSet, LikeViewSet
 from rest_framework.routers import DefaultRouter
 
 
@@ -27,6 +27,7 @@ from rest_framework.routers import DefaultRouter
 router = DefaultRouter()
 router.register('post', PostViewSet)
 router.register('comments', CommentViewSet)
+router.register('likes', LikeViewSet)
 
 
 urlpatterns = [
